@@ -4,7 +4,7 @@ const Palindrome = () => {
   const [inputValue, setInputValue] = useState('');
   const [result, setResult] = useState('');
 
-  const handleCheckPalindrome = () => {
+  const handleCheck = () => {
     const cleaned = inputValue.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
 
     let isPalindrome = true;
@@ -35,7 +35,7 @@ const Palindrome = () => {
         placeholder="Enter the text or number"
         onChange={(e) => setInputValue(e.target.value)}
       />
-      <button onClick={handleCheckPalindrome}>Check</button>
+      <button onClick={handleCheck}>Check</button>
       <p id="result">{result}</p>
     </div>
   );
